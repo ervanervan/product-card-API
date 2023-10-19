@@ -8,7 +8,7 @@ export default function Card({
   description,
   category,
 }) {
-  const maxTitleLength = 20;
+  const maxTitleLength = 17;
   const maxDescriptionLength = 70;
 
   const truncateText = (text, maxLength) => {
@@ -19,20 +19,24 @@ export default function Card({
   };
 
   return (
-    <div className="w-72 border p-4 shadow-md rounded-md bg-white">
+    <div className="w-76 md:w-56 border p-4 shadow-md rounded-md bg-white">
       <div className="relative w-full flex justify-center">
-        <img src={image} alt="" className="object-contain h-48 w-96" />
-        <div className="absolute top-0 right-0 text-gray-400 p-2">#{id}</div>
+        <img src={image} alt="" className="object-contain h-40 w-96" />
+        <div className="absolute top-0 right-0 text-gray-400 p-2 text-xs">
+          #{id}
+        </div>
       </div>
       <div>
-        <h2 className="font-bold text-lg py-2">
+        <h2 className="font-bold py-2 text-sm">
           {truncateText(title, maxTitleLength)}
         </h2>
-        <p className="italic capitalize font-medium">{category}</p>
-        <p className="py-2">
+        <p className="italic capitalize font-medium text-xs text-slate-700">
+          {category}
+        </p>
+        <p className="py-2 text-slate-700 text-xs">
           {truncateText(description, maxDescriptionLength)}
         </p>
-        <p className="font-bold mt-2">${price}</p>
+        <p className="font-bold text-sm mt-2">${price}</p>
       </div>
     </div>
   );

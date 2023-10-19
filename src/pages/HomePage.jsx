@@ -20,7 +20,7 @@ const HomePage = () => {
       <section className="bg-slate-50">
         <div className="container mx-auto">
           <h1 className="font-bold text-2xl p-6 md:p-8">Product Cards</h1>
-          <div className="px-6 pb-6 flex gap-6 flex-wrap items-start justify-center">
+          <div className="px-6 pb-6 flex gap-3 flex-wrap items-start justify-center">
             {products.map((product) => (
               <Card key={product.id} {...product} />
             ))}
