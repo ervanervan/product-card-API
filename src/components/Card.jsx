@@ -19,7 +19,7 @@ export default function Card({
   };
 
   return (
-    <div className="w-72 border p-4 shadow-md rounded-md">
+    <div className="w-72 border p-4 shadow-md rounded-md bg-white">
       <div className="relative w-full flex justify-center">
         <img src={image} alt="" className="object-contain h-48 w-96" />
         <div className="absolute top-0 right-0 text-gray-400 p-2">#{id}</div>

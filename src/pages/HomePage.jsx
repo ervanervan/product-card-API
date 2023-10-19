@@ -14,6 +14,7 @@ const HomePage = () => {
   useEffect(() => {
     getDataProducts();
   });
+
   return (
     <>
       <section className="bg-slate-50">
