@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 export default function Card({
   id,
@@ -36,7 +37,10 @@ export default function Card({
         <p className="py-2 text-slate-700 text-xs">
           {truncateText(description, maxDescriptionLength)}
         </p>
-        <p className="font-bold text-sm mt-2">${price}</p>
+        <div className="flex justify-between items-center">
+          <p className="font-bold text-sm mt-2">${price}</p>
+          <Button />
+        </div>
       </div>
     </div>
   );
