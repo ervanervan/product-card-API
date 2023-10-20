@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 
 const HomePage = () => {
-  const url = "https://fakestoreapi.com/products";
   const [products, setProducts] = useState([]);
+
+  const url = "https://fakestoreapi.com/products";
 
   const getDataProducts = async () => {
     const response = await fetch(url);
