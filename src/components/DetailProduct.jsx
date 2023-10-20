@@ -13,7 +13,7 @@ export default function DetailProduct({
         <h1 className="font-bold text-2xl p-6 md:p-8">Detail Product</h1>
         <div className="flex gap-10 justify-center items-center">
           <div className="rounded-md shadow-md">
-            <img src={image} alt="" />
+            <img src={image} alt="product image" />
           </div>
           <div className="flex gap-4">
             <h2 className="font-bold text-2xl">{title}</h2>
