@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 export default function Card({
   id,
@@ -37,9 +38,11 @@ export default function Card({
         <p className="py-2 text-slate-700 text-xs">
           {truncateText(description, maxDescriptionLength)}
         </p>
-        <div className="flex justify-between items-center">
-          <p className="font-bold text-sm mt-2">${price}</p>
-          <Button />
+        <div className="flex justify-between items-center pt-2">
+          <p className="font-bold text-sm">${price}</p>
+          <Link to={"/detailproduct"}>
+            <Button />
+          </Link>
         </div>
       </div>
     </div>
