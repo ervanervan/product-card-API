@@ -28,7 +28,7 @@ export default function DetailProduct() {
       <div className="container mx-auto">
         <h1 className="font-bold text-2xl p-6 md:p-8">Detail Product</h1>
         <button
-          className="flex gap-2 px-6 text-lg text-gray-700 items-center"
+          className="flex gap-2 px-6 text-lg text-gray-700 items-center py-4 rounded-md"
           onClick={handleHome}
         >
           <ChevronLeftIcon className="h-6 w-6 text-gray-600" />
