@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "../components/card";
+import Cards from "../components/Cards";
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
@@ -23,7 +23,7 @@ const HomePage = () => {
           <h1 className="font-bold text-2xl p-6 md:p-8">Product Cards</h1>
           <div className="px-6 pb-6 flex gap-3 flex-wrap items-start justify-center">
             {products.map((product) => (
-              <Card key={product.id} {...product} />
+              <Cards key={product.id} {...product} />
             ))}
           </div>
         </div>

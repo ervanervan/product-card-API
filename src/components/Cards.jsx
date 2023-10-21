@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
-export default function Card({
+export default function Cards({
   id,
   title,
   price,
@@ -19,7 +19,6 @@ export default function Card({
     }
     return text;
   };
-
   return (
     <div className="w-76 md:w-56 border p-4 shadow-md rounded-md bg-white">
       <div className="relative w-full flex justify-center">
