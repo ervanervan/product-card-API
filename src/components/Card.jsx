@@ -40,7 +40,7 @@ export default function Card({
         </p>
         <div className="flex justify-between items-center pt-2">
           <p className="font-bold text-sm">${price}</p>
-          <Link to={"/detailproduct"}>
+          <Link to={`/detailproduct/${id}`}>
             <Button />
           </Link>
         </div>
