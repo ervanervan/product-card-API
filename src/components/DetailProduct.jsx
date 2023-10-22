@@ -28,25 +28,35 @@ export default function DetailProduct() {
       <div className="container mx-auto">
         <h1 className="font-bold text-2xl p-6 md:p-8">Detail Product</h1>
         <button
-          className="flex gap-2 px-6 text-lg text-gray-700 items-center py-4 rounded-md"
+          className="flex gap-1 md:gap-2 px-6 text-base md:text-lg text-gray-700 items-center py-4 rounded-md"
           onClick={handleHome}
         >
-          <ChevronLeftIcon className="h-6 w-6 text-gray-600" />
+          <ChevronLeftIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-600" />
           <p>kembali</p>
         </button>
 
         {data && (
-          <div className="flex gap-10 justify-center items-center px-10">
-            <div className="flex justify-center rounded-md flex-1">
-              <img src={data.image} alt="product image" className="h-[28rem]" />
+          <div className="flex justify-center items-center px-6 lg:px-10 flex-col md:flex-row">
+            <div className="flex justify-center rounded-md flex-1 p-5">
+              <img
+                src={data.image}
+                alt="product image"
+                className="h-60 lg:h-[25rem]"
+              />
             </div>
-            <div className="flex flex-col gap-6 flex-1">
-              <h2 className="font-bold text-3xl">{data.title}</h2>
-              <p className="italic capitalize text-xl text-gray-500">
+            <div className="flex flex-col gap-2 md:gap-6 flex-1">
+              <h2 className="font-bold text-xl lg:text-3xl text-slate-900">
+                {data.title}
+              </h2>
+              <p className="italic capitalize text-base lg:text-xl text-gray-700">
                 {data.category}
               </p>
-              <p className="text-xl text-gray-500">{data.description}</p>
-              <p className="text-2xl font-bold">${data.price}</p>
+              <p className="text-base lg:text-lg text-gray-700">
+                {data.description}
+              </p>
+              <p className="text-lg lg:text-2xl font-bold text-slate-900">
+                ${data.price}
+              </p>
             </div>
           </div>
         )}
